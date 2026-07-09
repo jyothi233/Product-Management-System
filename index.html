@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="product management system applying crud operations">
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="images/niceicon.png" type="image/x-icon">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Product Management System</title>
+</head>
+<body class=" bg-darkblack text-white">
+
+  <div class=" container mx-auto p-3 ">
+
+    <h1 class="text-center">Product Management System</h1>
+
+    <form id='product-form' class="main">
+      <div class="input-form">
+      <label for="productName">Product name</label>
+      <input oninput="validateProductName()" class="input" type="text" id="productName">
+      <small>error message</small>
+    </div>
+    <div class="input-form">
+      <label for="productNumber">Product number</label>
+      <input oninput="validateProductNumber()" class="input" type="number" id="productNumber">
+      <small>error message</small>
+    </div>
+    <div class="input-form">
+      <label for="productCategory">Product category</label>
+      <input oninput="validateProductCategory()" class="input" type="text" id="productCategory">
+      <small>error message </small>
+    </div>
+    <div class="input-form ">
+      <label for="productDescription">Product description</label>
+      <textarea oninput="validateProductDescription()" class="input" type="text" id="productDescription"></textarea>
+      <small>error message</small>
+    </div>
+    <button id="add" type="submit" class="btn btn-outline-primary w-100 mb-5 ">Add</button>
+    <button id="update" onclick="updateProduct()" type="button" class="btn btn-outline-primary w-100 mb-5 d-none ">Update</button>
+  </form >
+
+    <div class="my-3">
+        <div class="group">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+            <g>
+              <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+        <input oninput="searchProduct()" class="input-search" id="search" type="search" placeholder="Search">
+      </div>
+    </div>
+
+    <table class="table table-bordered table-hover table-dark">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">Id</th>
+          <th scope="col">Product name</th>
+          <th scope="col">Product number</th>
+          <th scope="col">Product category</th>
+          <th scope="col">Product description</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    
+  </div>
+
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- index js -->
+  <script src="js/index.js"></script>
+</body>
+</html>
