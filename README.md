@@ -4,7 +4,7 @@
 This is a simple Product Management System that allows users to perform CRUD (Create, Read, Update, Delete) operations on products. The system is built using HTML, CSS, JavaScript, and Bootstrap for a responsive and user-friendly interface.🍁
 
 ## Screenshot
-<img src ='images/Screenshot 2023-12-21 at 5.22.37 PM.png' alt='applicationdemo'>
+<img src ='images/Screenshot.png' alt='applicationdemo'>
 
 ## Features 💠
 Create: Add new products with details such as name, price, and description.
